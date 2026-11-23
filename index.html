@@ -36,10 +36,15 @@ body {
 
 h1 {
     text-align: center;
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-size: clamp(2.75rem, 7vw, 5.5rem);
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.05;
     margin-bottom: 40px;
+}
+
+h1 span {
+    display: block;
+    white-space: nowrap;
 }
 
 p {
@@ -48,15 +53,10 @@ p {
     margin-bottom: 24px;
 }
 
-.remember {
-    font-weight: 700;
-    margin-top: 40px;
-}
-
 .pcv {
     font-weight: 800;
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
-    line-height: 1.1;
+    font-size: clamp(2.75rem, 7vw, 5.5rem);
+    line-height: 1.05;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0;
@@ -73,8 +73,8 @@ p {
          class="hero-image">
 
     <h1>
-        You Could Have Just Had<br>
-        Your Details Stolen
+        <span>You Could Have Just</span>
+        <span>Had Your Details Stolen</span>
     </h1>
 
     <p>
@@ -89,7 +89,7 @@ p {
         Cybercriminals increasingly use QR codes to direct people to fake websites designed to steal credentials, personal information, or payment details.
     </p>
 
-    <p class="remember">
+    <p>
         Remember:
     </p>
 
