@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -48,12 +48,12 @@ body {
     line-height: 1.05;
     margin-bottom: 50px;
 
-    /* Responsive but constrained */
-    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    /* Never wrap within a line, so it always stays on 2 lines */
+    white-space: nowrap;
 
-    /* Prevent overflow */
-    overflow-wrap: normal;
-    word-break: keep-all;
+    /* Scale so the longest line (~23 chars) always fits the container:
+       (viewport width - 40px page padding) / 13, capped at desktop size */
+    font-size: min(calc((100vw - 40px) / 13), 4.5rem);
 }
 
 .heading-line {
@@ -75,9 +75,6 @@ body {
     line-height: 1.1;
     margin-top: 30px;
 
-    /* Never wrap */
-    white-space: nowrap;
-
     /* Responsive */
     font-size: clamp(2.5rem, 8vw, 5.5rem);
 }
@@ -94,10 +91,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .heading {
-        font-size: clamp(2rem, 8vw, 3.5rem);
-    }
-
     .pcv {
         font-size: clamp(2rem, 8vw, 3.5rem);
     }
