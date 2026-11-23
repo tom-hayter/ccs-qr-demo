@@ -1,102 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cybersecurity Awareness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+<title>Pause. Check. Verify.</title>
 
 <style>
+html,
 body {
     margin: 0;
+    padding: 0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(to right, #432063, #93186C);
-    font-family: 'Manrope', sans-serif;
     color: white;
 }
 
-.container {
-    width: 90%;
-    max-width: 750px;
-    text-align: left;
+.page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
 }
 
-.hero-image {
-    display: block;
+.content {
+    width: 100%;
+    max-width: 900px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo img {
     width: 200px;
     height: 200px;
-    margin: 0 auto 40px auto;
+    object-fit: contain;
 }
 
-h1 {
+.heading {
     text-align: center;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 40px;
-}
-
-p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 24px;
-}
-
-.remember {
     font-weight: 700;
-    margin-top: 40px;
+    line-height: 1.05;
+    margin-bottom: 50px;
+
+    /* Responsive but constrained */
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+
+    /* Prevent overflow */
+    overflow-wrap: normal;
+    word-break: keep-all;
+}
+
+.heading-line {
+    display: block;
+}
+
+.body-text {
+    font-size: 2rem;
+    line-height: 1.7;
+}
+
+.body-text p {
+    margin: 0 0 24px 0;
 }
 
 .pcv {
-    font-weight: 800;
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.1;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 30px;
+
+    /* Never wrap */
+    white-space: nowrap;
+
+    /* Responsive */
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
+}
+
+@media (max-width: 768px) {
+    .body-text {
+        font-size: 1.35rem;
+    }
+
+    .logo img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .pcv {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .body-text {
+        font-size: 1.15rem;
+    }
+
+    .logo img {
+        width: 140px;
+        height: 140px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
+    <div class="content">
 
-    <img src="/ccs-qr-demo/alert.png"
-         alt="Cybersecurity Awareness"
-         class="hero-image">
+        <div class="logo">
+            <img src="alert.png" alt="Alert">
+        </div>
 
-    <h1>
-        You Could Have Just<br>
-        Had Your Details Stolen
-    </h1>
+        <h1 class="heading">
+            <span class="heading-line">You Could Have Just Had</span>
+            <span class="heading-line">Your Details Stolen</span>
+        </h1>
 
-    <p>
-        This QR code was safe.
-    </p>
+        <div class="body-text">
+            <p>This QR code was safe.</p>
 
-    <p>
-        But before you scanned it, did you know where it would take you?
-    </p>
+            <p>But before you scanned it, did you know where it would take you?</p>
 
-    <p>
-        Cybercriminals increasingly use QR codes to direct people to fake websites designed to steal credentials, personal information, or payment details.
-    </p>
+            <p>
+                Cybercriminals increasingly use QR codes to direct people to
+                fake websites designed to steal credentials, personal information,
+                or payment details.
+            </p>
 
-    <p class="remember">
-        Remember:
-    </p>
+            <p>Remember:</p>
+        </div>
 
-    <p class="pcv">
-        Pause. Check. Verify.
-    </p>
+        <div class="pcv">
+            Pause. Check. Verify.
+        </div>
 
+    </div>
 </div>
 
 </body>
